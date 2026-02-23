@@ -1,4 +1,4 @@
-# Network Traffic CTF Writeup
+# Network Traffic CTF Walk-Through
 
 This document contains the detailed writeup for two network traffic–based CTF challenges completed as part of the CyberConnect SOC Fellowship.
 
