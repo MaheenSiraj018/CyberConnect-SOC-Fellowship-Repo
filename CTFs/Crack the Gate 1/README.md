@@ -8,6 +8,8 @@ An investigation revealed a person of interest (`ctf-player@picoctf.org`) hiding
 ## Step 1: Source Code Inspection
 Upon inspecting the website's HTML source code, I found a hidden developer comment which is: 
 
+![Developer Hint in Source Code](dev_hint.png)
+
 ### Step 2: Decoding the Hint (ROT13)
 The challenge hints suggested a common rotation trick (ROT13). Decoding the string revealed a bypass instruction for developers:
 
@@ -22,6 +24,7 @@ This confirmed that the server-side security could be bypassed by adding a custo
 Since a standard login form does not allow for custom HTTP headers, I used the **Browser Developer Console** to manually trigger a `fetch` request to the `/login` endpoint.
 
 ### The Exploit Script:
+```javascript
 fetch('/login', {
     method: 'POST',
     headers: {
@@ -38,6 +41,7 @@ fetch('/login', {
     console.log("Response:", data);
     if (data.flag) alert("Flag Found: " + data.flag);
 });
+```
 
 # Final Result
 The server accepted the custom header and granted access, returning the flag in the JSON response.
