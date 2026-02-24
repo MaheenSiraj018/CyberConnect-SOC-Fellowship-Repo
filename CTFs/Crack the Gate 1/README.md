@@ -10,8 +10,8 @@ Upon inspecting the website's HTML source code, I found a hidden developer comme
 
 ![Developer Hint in Source Code](dev_hint.png)
 
-### Step 2: Decoding the Hint (ROT13)
-The challenge hints suggested a common rotation trick (ROT13). Decoding the string revealed a bypass instruction for developers:
+### Step 2: Decoding the Source Code Comment (ROT13)
+Upon decoding the string via a common rotation trick (ROT13) revealed a bypass instruction for developers:
 
 * Encoded: `ABGR: Wnpx - grzcbenel olcnff: hfr urnqre "K-Qri-Npprff: lrf"`
 * Decoded: `NOTE: Jack - temporary bypass: use header "X-Dev-Access: yes"`
